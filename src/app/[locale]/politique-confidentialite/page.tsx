@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const IconDoc = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -60,45 +60,45 @@ const IconMap = () => (
 const privacySections = [
   {
     number: "01",
-    title: "Collecte des donnÃ©es",
+    title: "Collecte des données",
     icon: <IconDoc />,
-    text: "Nous collectons les donnÃ©es que vous nous communiquez volontairement via les formulaires de contact et de prise de rendez-vous : nom, email, tÃ©lÃ©phone et message. Ces informations sont nÃ©cessaires pour traiter efficacement vos demandes.",
+    text: "Nous collectons les données que vous nous communiquez volontairement via les formulaires de contact et de prise de rendez-vous : nom, email, téléphone et message. Ces informations sont nécessaires pour traiter efficacement vos demandes.",
   },
   {
     number: "02",
-    title: "Utilisation des donnÃ©es",
+    title: "Utilisation des données",
     icon: <IconUser />,
-    text: "Vos donnÃ©es servent uniquement Ã  rÃ©pondre Ã  vos demandes, Ã  organiser vos rendez-vous et Ã  assurer le suivi qualifiÃ© de nos Ã©changes dans un cadre strictement confidentiel et notarial.",
+    text: "Vos données servent uniquement à répondre à vos demandes, à organiser vos rendez-vous et à assurer le suivi qualifié de nos échanges dans un cadre strictement confidentiel et notarial.",
   },
   {
     number: "03",
-    title: "Conservation des donnÃ©es",
+    title: "Conservation des données",
     icon: <IconClock />,
-    text: "Les donnÃ©es sont conservÃ©es uniquement pendant la durÃ©e nÃ©cessaire au traitement administratif et juridique de vos demandes, conformÃ©ment aux obligations applicables.",
+    text: "Les données sont conservées uniquement pendant la durée nécessaire au traitement administratif et juridique de vos demandes, conformément aux obligations applicables.",
   },
   {
     number: "04",
-    title: "Partage des donnÃ©es",
+    title: "Partage des données",
     icon: <IconShield />,
-    text: "Vos donnÃ©es ne sont ni vendues ni cÃ©dÃ©es Ã  des tiers. Elles peuvent Ãªtre traitÃ©es par des prestataires techniques uniquement lorsque cela est nÃ©cessaire au bon fonctionnement du site, dans le respect de la confidentialitÃ©.",
+    text: "Vos données ne sont ni vendues ni cédées à des tiers. Elles peuvent être traitées par des prestataires techniques uniquement lorsque cela est nécessaire au bon fonctionnement du site, dans le respect de la confidentialité.",
   },
   {
     number: "05",
-    title: "SÃ©curitÃ©",
+    title: "Sécurité",
     icon: <IconLock />,
-    text: "Le cabinet met en Å“uvre des mesures techniques et organisationnelles raisonnables afin de protÃ©ger vos donnÃ©es contre tout accÃ¨s non autorisÃ©, perte, modification ou divulgation.",
+    text: "Le cabinet met en œuvre des mesures techniques et organisationnelles raisonnables afin de protéger vos données contre tout accès non autorisé, perte, modification ou divulgation.",
   },
   {
     number: "06",
     title: "Vos droits",
     icon: <IconShield />,
-    text: "Vous disposez dâ€™un droit dâ€™accÃ¨s, de rectification, de suppression et de limitation concernant vos informations personnelles. Vous pouvez exercer ces droits en contactant directement le cabinet.",
+    text: "Vous disposez d’un droit d’accès, de rectification, de suppression et de limitation concernant vos informations personnelles. Vous pouvez exercer ces droits en contactant directement le cabinet.",
   },
   {
     number: "07",
-    title: "Contact relatif aux donnÃ©es personnelles",
+    title: "Contact relatif aux données personnelles",
     icon: <IconMail />,
-    text: "Pour toute demande relative Ã  la confidentialitÃ© ou Ã  la gestion de vos informations personnelles, vous pouvez contacter le cabinet par email, tÃ©lÃ©phone ou courrier.",
+    text: "Pour toute demande relative à la confidentialité ou à la gestion de vos informations personnelles, vous pouvez contacter le cabinet par email, téléphone ou courrier.",
   },
 ];
 
@@ -108,22 +108,22 @@ export default function PolitiqueConfidentialitePage() {
       <section className="legal-hero hero-bg-photo hero-bg-privacy privacy-hero-new-bg">
 
         <div className="legal-container legal-hero__inner">
-          <span className="legal-kicker">ConfidentialitÃ©</span>
-          <h1>Politique de confidentialitÃ©</h1>
+          <span className="legal-kicker">Confidentialité</span>
+          <h1>Politique de confidentialité</h1>
           <div className="legal-gold-line" />
           <p>
-            Nous accordons une importance particuliÃ¨re Ã  la confidentialitÃ© et Ã 
-            la protection des donnÃ©es de nos visiteurs et clients.
+            Nous accordons une importance particulière à la confidentialité et à
+            la protection des données de nos visiteurs et clients.
           </p>
         </div>
       </section>
 
       <main className="legal-page">
         <div className="legal-container">
-          <nav className="legal-breadcrumb" aria-label="Fil dâ€™Ariane">
+          <nav className="legal-breadcrumb" aria-label="Fil d’Ariane">
             <Link href="/">Accueil</Link>
             <span>/</span>
-            <strong>Politique de confidentialitÃ©</strong>
+            <strong>Politique de confidentialité</strong>
           </nav>
 
           <div className="legal-layout">
@@ -144,10 +144,10 @@ export default function PolitiqueConfidentialitePage() {
               <div className="legal-sidebar__icon">
                 <IconPhone />
               </div>
-              <h2>Besoin dâ€™aide ?</h2>
+              <h2>Besoin d’aide ?</h2>
               <p>
-                Notre Ã©quipe est Ã  votre Ã©coute pour toute question concernant la
-                protection de vos donnÃ©es personnelles.
+                Notre équipe est à votre écoute pour toute question concernant la
+                protection de vos données personnelles.
               </p>
 
               <div className="legal-sidebar__list">
@@ -165,7 +165,7 @@ export default function PolitiqueConfidentialitePage() {
                 </div>
                 <div>
                   <IconClock />
-                  <span>Lunâ€“Jeu : 08hâ€“17h Â· Ven : 08hâ€“13h</span>
+                  <span>Lun–Jeu : 08h–17h · Ven : 08h–13h</span>
                 </div>
               </div>
 
@@ -188,10 +188,10 @@ export default function PolitiqueConfidentialitePage() {
               <IconShield />
             </div>
             <div>
-              <h2>Une question concernant vos donnÃ©es ?</h2>
+              <h2>Une question concernant vos données ?</h2>
               <p>
-                Notre cabinet reste Ã  votre disposition pour toute demande
-                relative Ã  la confidentialitÃ© ou Ã  la gestion de vos informations
+                Notre cabinet reste à votre disposition pour toute demande
+                relative à la confidentialité ou à la gestion de vos informations
                 personnelles.
               </p>
             </div>

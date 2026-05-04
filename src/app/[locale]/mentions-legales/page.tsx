@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const IconDoc = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -71,17 +71,17 @@ const IconClock = () => (
 
 const legalSections = [
   {
-    title: "Ã‰diteur du site",
+    title: "Éditeur du site",
     icon: <IconDoc />,
     content: (
       <>
-        <p>Le prÃ©sent site est Ã©ditÃ© par le Cabinet de MaÃ®tre Amadou KonÃ©, Notaire.</p>
+        <p>Le présent site est édité par le Cabinet de Maître Amadou Koné, Notaire.</p>
         <ul>
           <li>
             <strong>Adresse :</strong> Hamdallaye ACI 2000, Rue 327, Bamako, Mali
           </li>
           <li>
-            <strong>TÃ©lÃ©phone :</strong> +223 20 22 44 66
+            <strong>Téléphone :</strong> +223 20 22 44 66
           </li>
           <li>
             <strong>Email :</strong> contact@maitre-amadou-kone.com
@@ -93,38 +93,38 @@ const legalSections = [
   {
     title: "Directeur de la publication",
     icon: <IconUser />,
-    content: <p>MaÃ®tre Amadou KonÃ©, Notaire titulaire de la charge.</p>,
+    content: <p>Maître Amadou Koné, Notaire titulaire de la charge.</p>,
   },
   {
-    title: "HÃ©bergement",
+    title: "Hébergement",
     icon: <IconGlobe />,
     content: (
       <p>
-        Le site est hÃ©bergÃ© par Vercel Inc., situÃ© au 340 S Lemon Ave #1135,
+        Le site est hébergé par Vercel Inc., situé au 340 S Lemon Ave #1135,
         Walnut, CA 91789, USA.
       </p>
     ),
   },
   {
-    title: "PropriÃ©tÃ© intellectuelle",
+    title: "Propriété intellectuelle",
     icon: <IconShield />,
     content: (
       <p>
-        Lâ€™ensemble des contenus prÃ©sents sur ce site relÃ¨ve de la lÃ©gislation
-        malienne et internationale sur le droit dâ€™auteur et la propriÃ©tÃ©
+        L’ensemble des contenus présents sur ce site relève de la législation
+        malienne et internationale sur le droit d’auteur et la propriété
         intellectuelle. Toute reproduction totale ou partielle est strictement
-        interdite sans autorisation expresse et prÃ©alable.
+        interdite sans autorisation expresse et préalable.
       </p>
     ),
   },
   {
-    title: "ResponsabilitÃ©",
+    title: "Responsabilité",
     icon: <IconScale />,
     content: (
       <p>
-        Le cabinet sâ€™efforce de fournir des informations exactes et mises Ã  jour.
-        Toutefois, ces informations sont donnÃ©es Ã  titre indicatif et ne sauraient
-        remplacer un conseil personnalisÃ© adaptÃ© Ã  chaque situation.
+        Le cabinet s’efforce de fournir des informations exactes et mises à jour.
+        Toutefois, ces informations sont données à titre indicatif et ne sauraient
+        remplacer un conseil personnalisé adapté à chaque situation.
       </p>
     ),
   },
@@ -134,7 +134,7 @@ const legalSections = [
     content: (
       <p>
         Pour toute question relative au site, vous pouvez contacter le cabinet
-        aux coordonnÃ©es indiquÃ©es sur cette page.
+        aux coordonnées indiquées sur cette page.
       </p>
     ),
   },
@@ -146,22 +146,22 @@ export default function MentionsLegalesPage() {
       <section className="legal-hero hero-bg-photo hero-bg-mentions mentions-hero-new-bg">
 
         <div className="legal-container legal-hero__inner">
-          <span className="legal-kicker">Informations lÃ©gales</span>
-          <h1>Mentions lÃ©gales</h1>
+          <span className="legal-kicker">Informations légales</span>
+          <h1>Mentions légales</h1>
           <div className="legal-gold-line" />
           <p>
-            Les informations lÃ©gales relatives au site du Cabinet MaÃ®tre Amadou
-            KonÃ©.
+            Les informations légales relatives au site du Cabinet Maître Amadou
+            Koné.
           </p>
         </div>
       </section>
 
       <main className="legal-page">
         <div className="legal-container">
-          <nav className="legal-breadcrumb" aria-label="Fil dâ€™Ariane">
+          <nav className="legal-breadcrumb" aria-label="Fil d’Ariane">
             <Link href="/">Accueil</Link>
             <span>/</span>
-            <strong>Mentions lÃ©gales</strong>
+            <strong>Mentions légales</strong>
           </nav>
 
           <div className="legal-layout">
@@ -184,7 +184,7 @@ export default function MentionsLegalesPage() {
               <div className="legal-sidebar__icon">
                 <IconScale />
               </div>
-              <h2>Informations clÃ©s</h2>
+              <h2>Informations clés</h2>
 
               <div className="legal-sidebar__list">
                 <div>
@@ -201,7 +201,7 @@ export default function MentionsLegalesPage() {
                 </a>
                 <div>
                   <IconClock />
-                  <span>Lunâ€“Jeu : 08hâ€“17h Â· Ven : 08hâ€“13h</span>
+                  <span>Lun–Jeu : 08h–17h · Ven : 08h–13h</span>
                 </div>
               </div>
 
@@ -224,10 +224,10 @@ export default function MentionsLegalesPage() {
               <IconMail />
             </div>
             <div>
-              <h2>Des questions sur nos mentions lÃ©gales ?</h2>
+              <h2>Des questions sur nos mentions légales ?</h2>
               <p>
-                Notre Ã©quipe reste disponible pour toute demande dâ€™information
-                complÃ©mentaire concernant lâ€™utilisation de notre site.
+                Notre équipe reste disponible pour toute demande d’information
+                complémentaire concernant l’utilisation de notre site.
               </p>
             </div>
             <div className="legal-cta__actions">

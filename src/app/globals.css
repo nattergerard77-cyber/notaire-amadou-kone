@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -2757,7 +2757,7 @@
 .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; }
 
 /* =========================================================
-   MOBILE HOME RESPONSIVE â€” DO NOT AFFECT DESKTOP
+   MOBILE HOME RESPONSIVE — DO NOT AFFECT DESKTOP
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -2766,7 +2766,7 @@
     padding-top: 0 !important;
   }
 
-  /* Logo Subtitle Visibility â€” FIX */
+  /* Logo Subtitle Visibility — FIX */
   .site-logo-container {
     gap: 10px !important;
     min-width: 0 !important;
@@ -2797,14 +2797,14 @@
     color: rgba(255, 255, 255, 0.7) !important;
   }
 
-  /* Hero Section Home â€” Image plus visible */
+  /* Hero Section Home — Image plus visible */
   .hero-section.home-hero-new-bg {
     padding-top: 140px !important;
     padding-bottom: 64px !important;
     position: relative !important;
     z-index: 10 !important;
     
-    /* Correction visibilitÃ© image hero mobile */
+    /* Correction visibilité image hero mobile */
     background: 
       linear-gradient(
         180deg,
@@ -2818,7 +2818,7 @@
     background-repeat: no-repeat !important;
   }
 
-  /* DÃ©sactivation des overlays par dÃ©faut pour ce hero mobile */
+  /* Désactivation des overlays par défaut pour ce hero mobile */
   .hero-bg-photo.home-hero-new-bg::before,
   .hero-bg-photo.home-hero-new-bg::after {
     display: none !important;
@@ -2956,7 +2956,7 @@
     padding-top: 130px !important;
     padding-bottom: 54px !important;
     
-    /* Variante 2 : Cadrage optimisÃ© pour visibilitÃ© image (52% horizontal) */
+    /* Variante 2 : Cadrage optimisé pour visibilité image (52% horizontal) */
     background:
       linear-gradient(
         180deg,
