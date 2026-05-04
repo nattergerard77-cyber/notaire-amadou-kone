@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -11,10 +11,10 @@ import '../globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Maître Amadou Koné — Notaire à Bamako, Mali',
-    template: '%s | Maître Amadou Koné — Notaire Bamako',
+    default: 'MaÃ®tre Amadou KonÃ© â€” Notaire Ã  Bamako, Mali',
+    template: '%s | MaÃ®tre Amadou KonÃ© â€” Notaire Bamako',
   },
-  description: 'Cabinet notarial de Maître Amadou Koné à Bamako. Expert en droit immobilier, successions, droit des affaires et donations au Mali.',
+  description: 'Cabinet notarial de MaÃ®tre Amadou KonÃ© Ã  Bamako. Expert en droit immobilier, successions, droit des affaires et donations au Mali.',
 }
 
 export default async function LocaleLayout({
@@ -43,11 +43,11 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LegalService',
-              name: 'Cabinet Maître Amadou Koné',
-              description: 'Cabinet notarial de référence à Bamako, Mali.',
-              url: 'https://www.notaire-kone.ml',
+              name: 'Cabinet MaÃ®tre Amadou KonÃ©',
+              description: 'Cabinet notarial de rÃ©fÃ©rence Ã  Bamako, Mali.',
+              url: 'https://www.maitre-amadou-kone.com',
               telephone: '+22320224466',
-              email: 'contact@notaire-kone.ml',
+              email: 'contact@maitre-amadou-kone.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Hamdallaye ACI 2000, Rue 327',

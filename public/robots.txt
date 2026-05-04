@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.notaire-kone.ml/sitemap.xml
+Sitemap: https://www.maitre-amadou-kone.com/sitemap.xml
