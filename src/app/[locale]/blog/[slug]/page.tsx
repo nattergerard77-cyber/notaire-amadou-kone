@@ -7,12 +7,19 @@ import { ARTICLES } from '@/data/blogArticles'
 import { IconCalendar, IconScale, IconPhone } from '@/components/shared/SvgIcons'
 
 export function generateStaticParams() {
-  return ARTICLES.map((article) => ({ slug: article.slug }))
+  const locales = ['fr', 'en']
+  return ARTICLES.flatMap((article) =>
+    locales.map((locale) => ({
+      locale,
+      slug: article.slug,
+    }))
+  )
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export function generateMetadata({ params }: { params: { slug: string; locale: string } }): Metadata {
   const article = ARTICLES.find((a) => a.slug === params.slug)
   if (!article) return {}
+
   return generatePageMetadata({
     title: `${article.title} — Blog Notaire`,
     description: article.excerpt,
@@ -20,9 +27,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   })
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
+export default function ArticlePage({ params }: { params: { slug: string; locale: string } }) {
   const article = ARTICLES.find((a) => a.slug === params.slug)
-  if (!article) return notFound()
+  if (!article) {
+    notFound()
+  }
 
   return (
     <main>
