@@ -1,0 +1,217 @@
+
+.expertise-grid { display: grid; grid-template-columns: 1fr 1fr; }
+
+/* =========================================================
+   MOBILE HOME RESPONSIVE — DO NOT AFFECT DESKTOP
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Main container fix to remove white gap on home page */
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Logo Subtitle Visibility — FIX */
+  .site-logo-container {
+    gap: 10px !important;
+    min-width: 0 !important;
+  }
+  
+  .site-logo-text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+  }
+
+  .site-logo-text-title {
+    font-size: 1.0rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+  }
+
+  .site-logo-text-subtitle {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.55rem !important;
+    letter-spacing: 0.12em !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  /* Hero Section Home — Image plus visible */
+  .hero-section.home-hero-new-bg {
+    padding-top: 140px !important;
+    padding-bottom: 64px !important;
+    position: relative !important;
+    z-index: 10 !important;
+    
+    /* Correction visibilité image hero mobile */
+    background: 
+      linear-gradient(
+        180deg,
+        rgba(6, 22, 38, 0.44) 0%,
+        rgba(6, 22, 38, 0.36) 46%,
+        rgba(6, 22, 38, 0.52) 100%
+      ),
+      url("/images/hero-bg/01-home-hero.png") !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Désactivation des overlays par défaut pour ce hero mobile */
+  .hero-bg-photo.home-hero-new-bg::before,
+  .hero-bg-photo.home-hero-new-bg::after {
+    display: none !important;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    text-align: center !important;
+  }
+
+  .hero-copy {
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-kicker {
+    display: inline-block !important;
+    color: #D8B26E !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .hero-title {
+    font-size: clamp(42px, 12vw, 56px) !important;
+    line-height: 1.0 !important;
+    margin-bottom: 1rem !important;
+    color: #ffffff !important;
+    max-width: 100% !important;
+  }
+
+  .hero-text {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: 2rem !important;
+    max-width: 100% !important;
+  }
+
+  .hero-actions {
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 1.1rem !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-stats {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin-top: 40px !important;
+    padding-top: 32px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+  }
+
+  .stat-divider {
+    display: none !important;
+  }
+
+  /* Expertise Card */
+  .expertise-panel {
+    order: 6 !important;
+    width: 100% !important;
+    padding: 2.5rem 1.5rem !important;
+    background: rgba(13, 27, 42, 0.98) !important;
+    border: 1px solid rgba(216, 178, 110, 0.25) !important;
+    margin-top: 10px !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Homepage Sections */
+  .domains-section .domains-grid,
+  .domains-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .cta-band {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    padding: 40px 24px !important;
+    gap: 24px !important;
+  }
+
+  .cta-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .cta-actions > * {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(40px, 11vw, 48px) !important;
+  }
+  
+  .hero-section.home-hero-new-bg {
+    padding-top: 130px !important;
+    padding-bottom: 54px !important;
+    
+    /* Variante 2 : Cadrage optimisé pour visibilité image (52% horizontal) */
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 22, 38, 0.44) 0%,
+        rgba(6, 22, 38, 0.36) 45%,
+        rgba(6, 22, 38, 0.52) 100%
+      ),
+      url("/images/hero-bg/01-home-hero.png") !important;
+    background-size: cover !important;
+    background-position: 52% center !important;
+    background-repeat: no-repeat !important;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "domains": "Practice Areas",
+    "practical": "Practical Info",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "cabinet-notaire-kone",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "@next/third-parties": "^14.2.5",
+    "clsx": "^2.1.1",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^3.6.0",
+    "framer-motion": "^11.3.8",
+    "lucide-react": "^0.414.0",
+    "next": "14.2.5",
+    "next-contentlayer": "^0.3.4",
+    "next-intl": "^3.26.5",
+    "next-sitemap": "^4.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.74.0",
+    "resend": "^3.4.0",
+    "tailwind-merge": "^2.6.1",
+    "typescript": "^5.5.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.5.13",
+    "tailwindcss": "^4.2.4"
+  }
+}

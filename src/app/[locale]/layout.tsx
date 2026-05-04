@@ -1,0 +1,74 @@
+import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import WhatsAppButton from '@/components/shared/WhatsAppButton'
+import CookieBanner from '@/components/layout/CookieBanner'
+import '../globals.css'
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Maître Amadou Koné — Notaire à Bamako, Mali',
+    template: '%s | Maître Amadou Koné — Notaire Bamako',
+  },
+  description: 'Cabinet notarial de Maître Amadou Koné à Bamako. Expert en droit immobilier, successions, droit des affaires et donations au Mali.',
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  if (!routing.locales.includes(locale as 'fr' | 'en')) {
+    notFound()
+  }
+
+  const messages = await getMessages()
+
+  return (
+    <html lang={locale} style={{ scrollBehavior: 'smooth' }}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LegalService',
+              name: 'Cabinet Maître Amadou Koné',
+              description: 'Cabinet notarial de référence à Bamako, Mali.',
+              url: 'https://www.notaire-kone.ml',
+              telephone: '+22320224466',
+              email: 'contact@notaire-kone.ml',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Hamdallaye ACI 2000, Rue 327',
+                addressLocality: 'Bamako',
+                addressCountry: 'ML',
+              },
+            }),
+          }}
+        />
+      </head>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main style={{ paddingTop: '88px' }}>
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+          <CookieBanner />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  )
+}

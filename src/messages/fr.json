@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "domains": "Domaines",
+    "practical": "Infos pratiques",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookAppointment": "Prendre RDV"
+  }
+}
