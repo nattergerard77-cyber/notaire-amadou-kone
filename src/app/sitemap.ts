@@ -35,8 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // Pages des articles de blog
-  // On inclut les articles hardcodés dans constants.ts
+  // Pages des articles de blog (uniquement les articles validés dans constants.ts)
   const blogPages = BLOG_ARTICLES.map((article) => ({
     url: `${baseUrl}/blog/${article.slug}`,
     lastModified: new Date(article.date),
@@ -44,24 +43,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Ajout des articles spécifiques demandés si non présents
-  const specificArticles = [
-    'securiser-transaction-immobiliere-bamako',
-    'succession-familiale-etapes',
-    'creer-societe-passer-par-notaire',
-    'vente-immobiliere-documents',
-    'donation-parents-enfants',
-    'contrat-mariage-proteger-patrimoine',
-  ]
-
-  const extraBlogPages = specificArticles
-    .filter(slug => !BLOG_ARTICLES.find(a => a.slug === slug))
-    .map(slug => ({
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
-
-  return [...staticPages, ...domainPages, ...blogPages, ...extraBlogPages]
+  return [...staticPages, ...domainPages, ...blogPages]
 }
