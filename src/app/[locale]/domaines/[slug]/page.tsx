@@ -475,6 +475,18 @@ function BenefitIcon({ name }: { name: DomainData['benefits'][number]['icon'] })
   return <Icon size={23} strokeWidth={1.6} />
 }
 
+function generateId(title: string) {
+  return title
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, '')
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim()
+}
+
 export default function DomainDetailPage({ params }: Params) {
   const data = DOMAIN_DATA[params.slug]
 
@@ -485,7 +497,6 @@ export default function DomainDetailPage({ params }: Params) {
   return (
     <>
       <section className="area-hero hero-bg-photo hero-bg-domaines domaines-hero-new-bg">
-
         <div className="section-container area-hero-inner">
           <div>
             <p className="area-kicker">Domaine d’expertise</p>
@@ -517,20 +528,27 @@ export default function DomainDetailPage({ params }: Params) {
                 <div className="area-services-showcase">
                   {/* Grande carte principale à gauche (Category 1) */}
                   {data.services[0] && (
-                    <article className="area-services-main-card animate-card hover-lift">
+                    <Link 
+                      href={`#${generateId(data.services[0].title)}`}
+                      className="area-services-main-card animate-card hover-lift"
+                      aria-label={`Voir les détails : ${data.services[0].title}`}
+                    >
                       <div className="area-service-icon">
                         <ServiceIcon name={data.services[0].icon} />
                       </div>
                       <div className="area-service-content">
                         <h3>{data.services[0].title}</h3>
                         <ul>
-                          {data.services[0].items.map((item) => (
+                          {data.services[0].items.slice(0, 4).map((item) => (
                             <li key={item}>
                               <CheckCircle2 size={18} />
                               <span>{item}</span>
                             </li>
                           ))}
                         </ul>
+                        <div style={{ marginTop: '20px', color: '#b68a42', fontWeight: 600, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          Voir les détails <ChevronRight size={16} />
+                        </div>
                       </div>
                       <div 
                         className="area-service-visual" 
@@ -541,13 +559,18 @@ export default function DomainDetailPage({ params }: Params) {
                                            params.slug === 'donations' ? 'url("/images/blog/donation-famille.png")' : 'none'
                         }} 
                       />
-                    </article>
+                    </Link>
                   )}
 
                   {/* Colonne de 3 petites cartes à droite (Categories 2, 3, 4) */}
                   <div className="area-services-stack">
                     {data.services.slice(1, 4).map((service) => (
-                      <article key={service.title} className="area-services-small-card animate-card hover-lift">
+                      <Link 
+                        key={service.title} 
+                        href={`#${generateId(service.title)}`}
+                        className="area-services-small-card animate-card hover-lift"
+                        aria-label={`Voir les détails : ${service.title}`}
+                      >
                         <div className="area-service-icon-small">
                           <ServiceIcon name={service.icon} />
                         </div>
@@ -560,22 +583,20 @@ export default function DomainDetailPage({ params }: Params) {
                           </ul>
                         </div>
                         <ChevronRight className="area-service-arrow" size={20} />
-                      </article>
+                      </Link>
                     ))}
-                    
-                    {/* Fallback si moins de 4 services pour garder l'alignement visuel si besoin, 
-                        mais ici on map juste ce qu'on a. */}
                   </div>
                 </div>
 
-                {/* Si plus de 4 services, on peut les afficher en dessous en format standard 
-                    mais selon la règle on se concentre sur les 4 premiers pour le layout pile. */}
+                {/* Si plus de 4 services */}
                 {data.services.length > 4 && (
                   <div className="area-services-grid" style={{ marginTop: '20px' }}>
                     {data.services.slice(4).map((service) => (
-                      <article
+                      <Link
                         key={service.title}
+                        href={`#${generateId(service.title)}`}
                         className={service.wide ? 'area-card area-card-wide animate-card hover-lift' : 'area-card animate-card hover-lift'}
+                        aria-label={`Voir les détails : ${service.title}`}
                       >
                         <div className="area-card-icon">
                           <ServiceIcon name={service.icon} />
@@ -583,18 +604,73 @@ export default function DomainDetailPage({ params }: Params) {
                         <div>
                           <h3>{service.title}</h3>
                           <ul>
-                            {service.items.map((item) => (
+                            {service.items.slice(0, 3).map((item) => (
                               <li key={item}>
                                 <CheckCircle2 size={16} />
                                 <span>{item}</span>
                               </li>
                             ))}
                           </ul>
+                          <div style={{ marginTop: '12px', color: '#b68a42', fontWeight: 600, fontSize: '0.85rem' }}>
+                            Détails →
+                          </div>
                         </div>
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 )}
+              </section>
+
+              {/* SECTION DÉTAILLÉE DES PRESTATIONS */}
+              <section className="area-section">
+                <div className="area-section-heading">
+                  <h2>Détails des prestations</h2>
+                  <span />
+                </div>
+
+                <div className="area-service-details-container">
+                  {data.services.map((service) => (
+                    <div 
+                      key={service.title} 
+                      id={generateId(service.title)}
+                      className="area-service-detail-card area-service-detail-item animate-card"
+                    >
+                      <div className="area-service-detail-header">
+                        <div className="area-service-detail-icon">
+                          <ServiceIcon name={service.icon} />
+                        </div>
+                        <h3>{service.title}</h3>
+                      </div>
+                      
+                      <div className="area-service-detail-content">
+                        <div className="area-service-detail-description">
+                          <p>
+                            Notre cabinet vous accompagne dans toutes les démarches liées à {service.title.toLowerCase()}. 
+                            Nous assurons la rédaction des actes, le conseil juridique et le suivi administratif pour garantir la sécurité de vos opérations.
+                          </p>
+                          <div className="area-service-detail-footer">
+                            <Link href="/infos-pratiques/rendez-vous" className="area-primary-btn" style={{ padding: '0 20px', minHeight: '46px', fontSize: '0.9rem' }}>
+                              <CalendarDays size={16} />
+                              Prendre RDV
+                            </Link>
+                          </div>
+                        </div>
+                        
+                        <div className="area-service-detail-list-wrapper">
+                          <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '15px', color: '#071827' }}>Services inclus :</h4>
+                          <ul className="area-service-detail-list">
+                            {service.items.map((item) => (
+                              <li key={item}>
+                                <CheckCircle2 size={18} />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </section>
 
               <section className="area-section">

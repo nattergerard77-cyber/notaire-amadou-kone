@@ -2970,3 +2970,145 @@
     background-repeat: no-repeat !important;
   }
 }
+
+/* =========================================================
+   INTERACTIVITÉ CARTES PRESTATIONS DOMAINES
+   ========================================================= */
+
+.area-services-main-card,
+.area-services-small-card,
+.area-card {
+  cursor: pointer;
+  transition: all 0.32s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  outline: none;
+  text-decoration: none !important;
+}
+
+.area-services-main-card:hover,
+.area-services-small-card:hover,
+.area-card:hover {
+  border-color: #d8b26e !important;
+  box-shadow: 0 25px 60px rgba(216, 178, 110, 0.18) !important;
+  transform: translateY(-5px) !important;
+}
+
+.area-services-small-card:hover .area-service-arrow {
+  opacity: 1 !important;
+  transform: translateX(5px);
+  color: #b68a42 !important;
+}
+
+.area-service-detail-item {
+  scroll-margin-top: 120px;
+}
+
+.area-services-main-card:focus-visible,
+.area-services-small-card:focus-visible,
+.area-card:focus-visible {
+  outline: 2px solid #d8b26e !important;
+  outline-offset: 4px;
+}
+
+.area-service-details-container {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.area-service-detail-card {
+  background: #ffffff;
+  border: 1px solid rgba(216, 178, 110, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(8, 24, 42, 0.03);
+}
+
+.area-service-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2eade;
+}
+
+.area-service-detail-icon {
+  width: 54px;
+  height: 54px;
+  background: #fbf4e7;
+  color: #b68a42;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-service-detail-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.1rem;
+  color: #071827;
+  margin: 0;
+  font-weight: 500;
+}
+
+.area-service-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.area-service-detail-description p {
+  color: #475467;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.area-service-detail-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid !important;
+  gap: 14px !important;
+}
+
+.area-service-detail-list li {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+  color: #344054 !important;
+  font-size: 0.98rem !important;
+}
+
+.area-service-detail-list li svg {
+  color: #b68a42;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.area-service-detail-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .area-service-detail-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .area-service-detail-card {
+    padding: 25px;
+  }
+  
+  .area-service-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .area-service-detail-card h3 {
+    font-size: 1.8rem;
+  }
+}
