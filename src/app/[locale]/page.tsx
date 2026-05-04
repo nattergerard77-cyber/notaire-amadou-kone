@@ -7,8 +7,38 @@ import { LogoMarkAK, DecorativePalace, DecorativeSeal, DecorativeScale, IconLaur
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel'
 
 export const metadata: Metadata = {
-  title: 'Maître Amadou Koné — Notaire à Bamako, Mali',
-  description: 'Cabinet notarial de Maître Amadou Koné à Bamako. Droit immobilier, successions, famille, droit des affaires au Mali.',
+  title: 'Maître Amadou Koné - Notaire à Bamako, Mali',
+  description: 'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
+  alternates: {
+    canonical: 'https://www.maitre-amadou-kone.com',
+  },
+  openGraph: {
+    title: 'Maître Amadou Koné - Notaire à Bamako, Mali',
+    description: 'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
+    url: 'https://www.maitre-amadou-kone.com',
+    siteName: 'Maître Amadou Koné',
+    type: 'website',
+    locale: 'fr_ML',
+  },
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Maître Amadou Koné",
+  "alternateName": "Cabinet Notarial Maître Amadou Koné",
+  "url": "https://www.maitre-amadou-kone.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Bamako"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bamako",
+    "addressCountry": "ML"
+  },
+  "telephone": "+223 20 22 44 66",
+  "logo": "https://www.maitre-amadou-kone.com/images/favicon.png"
 }
 
 const DOMAIN_ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
@@ -23,6 +53,10 @@ const DOMAIN_ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ══════════ HERO ══════════ */}
       <section className="hero-section hero-bg-photo hero-bg-home home-hero-new-bg">
 

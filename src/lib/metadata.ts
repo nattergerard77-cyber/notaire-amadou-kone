@@ -1,39 +1,39 @@
 import type { Metadata } from 'next'
 import { CABINET } from './constants'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.maitre-amadou-kone.com'
+const siteUrl = 'https://www.maitre-amadou-kone.com'
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${CABINET.name} — Notaire à Bamako, Mali`,
-    template: `%s | ${CABINET.name} — Notaire Bamako`,
+    default: 'Maître Amadou Koné - Notaire à Bamako, Mali',
+    template: `%s | Maître Amadou Koné - Notaire à Bamako`,
   },
   description:
-    'Cabinet notarial de Maître Amadou Koné à Bamako. Expert en droit immobilier, successions, droit des affaires et donations au Mali. Prenez rendez-vous en ligne.',
+    'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
   keywords: [
     'notaire Bamako', 'notaire Mali', 'acte notarié Mali',
     'achat immobilier Bamako', 'succession Mali', 'droit des affaires Mali',
     'Maître Amadou Koné', 'cabinet notarial Bamako',
     'titre foncier Mali', 'donation Mali',
   ],
-  authors: [{ name: CABINET.name }],
-  creator: CABINET.name,
-  publisher: CABINET.shortName,
+  authors: [{ name: 'Maître Amadou Koné' }],
+  creator: 'Maître Amadou Koné',
+  publisher: 'Cabinet Notarial Maître Amadou Koné',
   openGraph: {
     type: 'website',
     locale: 'fr_ML',
     url: siteUrl,
-    siteName: `${CABINET.name} — Notaire`,
-    title: `${CABINET.name} — Notaire à Bamako, Mali`,
-    description: 'Cabinet notarial de référence à Bamako. Droit immobilier, successions, famille, droit des affaires.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Cabinet Maître Amadou Koné — Notaire Bamako' }],
+    siteName: 'Maître Amadou Koné',
+    title: 'Maître Amadou Koné - Notaire à Bamako, Mali',
+    description: 'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Cabinet Maître Amadou Koné - Notaire Bamako' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${CABINET.name} — Notaire à Bamako`,
-    description: 'Cabinet notarial de référence à Bamako, Mali.',
-    images: ['/og-image.jpg'],
+    title: 'Maître Amadou Koné - Notaire à Bamako, Mali',
+    description: 'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
+    images: ['/images/og-image.jpg'],
   },
   robots: {
     index: true,
