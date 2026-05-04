@@ -7,15 +7,10 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import WhatsAppButton from '@/components/shared/WhatsAppButton'
 import CookieBanner from '@/components/layout/CookieBanner'
+import { defaultMetadata } from '@/lib/metadata'
 import '../globals.css'
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Maître Amadou Koné — Notaire à Bamako, Mali',
-    template: '%s | Maître Amadou Koné — Notaire Bamako',
-  },
-  description: 'Cabinet notarial de Maître Amadou Koné à Bamako. Expert en droit immobilier, successions, droit des affaires et donations au Mali.',
-}
+export const metadata: Metadata = defaultMetadata
 
 export default async function LocaleLayout({
   children,

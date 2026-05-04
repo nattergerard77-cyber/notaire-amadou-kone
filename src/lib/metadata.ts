@@ -47,6 +47,11 @@ export const defaultMetadata: Metadata = {
   verification: {
     google: 'VOTRE_GOOGLE_VERIFICATION_CODE',
   },
+  icons: {
+    icon: '/images/favicon.png',
+    shortcut: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 }
 
 export function generatePageMetadata(params: {
