@@ -22,25 +22,6 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Maître Amadou Koné",
-  "alternateName": "Cabinet Notarial Maître Amadou Koné",
-  "url": "https://www.maitre-amadou-kone.com",
-  "areaServed": {
-    "@type": "City",
-    "name": "Bamako"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bamako",
-    "addressCountry": "ML"
-  },
-  "telephone": "+223 20 22 44 66",
-  "logo": "https://www.maitre-amadou-kone.com/images/favicon.png"
-}
-
 const DOMAIN_ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   'immobilier': IconBuilding,
   'famille-succession': IconFamily,
@@ -53,10 +34,6 @@ const DOMAIN_ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       {/* ══════════ HERO ══════════ */}
       <section className="hero-section hero-bg-photo hero-bg-home home-hero-new-bg">
 

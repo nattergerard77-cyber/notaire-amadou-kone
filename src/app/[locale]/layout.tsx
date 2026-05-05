@@ -36,19 +36,22 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LegalService',
-              name: 'Cabinet Maître Amadou Koné',
-              description: 'Cabinet notarial de référence à Bamako, Mali.',
-              url: 'https://www.maitre-amadou-kone.com',
-              telephone: '+22320224466',
-              email: 'contact@maitre-amadou-kone.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Hamdallaye ACI 2000, Rue 327',
-                addressLocality: 'Bamako',
-                addressCountry: 'ML',
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              "name": "Maître Amadou Koné",
+              "alternateName": "Cabinet Notarial Maître Amadou Koné",
+              "url": "https://www.maitre-amadou-kone.com",
+              "areaServed": {
+                "@type": "City",
+                "name": "Bamako"
               },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bamako",
+                "addressCountry": "ML"
+              },
+              "telephone": "+223 20 22 44 66",
+              "logo": "https://www.maitre-amadou-kone.com/images/favicon.png"
             }),
           }}
         />
