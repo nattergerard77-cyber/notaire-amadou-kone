@@ -3,7 +3,7 @@ export const CABINET = {
   title: 'Notaire à Bamako, Mali',
   shortName: 'Cabinet Koné',
   phone: '+223 63 07 76 59',
-  whatsapp: '22376000000',
+  whatsapp: '22363077659',
   email: 'contact@maitre-amadou-kone.com',
   address: {
     street: 'Hamdallaye ACI 2000, Rue 327',

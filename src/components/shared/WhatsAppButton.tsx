@@ -2,7 +2,7 @@
 import { CABINET } from '@/lib/constants'
 
 export default function WhatsAppButton() {
-  const msg = encodeURIComponent('Bonjour Maître Koné, je souhaite obtenir des informations sur vos services notariaux.')
+  const msg = encodeURIComponent('Bonjour, je souhaite prendre rendez-vous avec le cabinet.')
   return (
     <a
       href={`https://wa.me/${CABINET.whatsapp}?text=${msg}`}
