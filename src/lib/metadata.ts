@@ -5,6 +5,7 @@ const siteUrl = 'https://www.maitre-amadou-kone.com'
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: 'Maître Amadou Koné',
   title: {
     default: 'Maître Amadou Koné - Notaire à Bamako, Mali',
     template: `%s | Maître Amadou Koné - Notaire à Bamako`,

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.maitre-amadou-kone.com',
   },
+  applicationName: 'Maître Amadou Koné',
   openGraph: {
     title: 'Maître Amadou Koné - Notaire à Bamako, Mali',
     description: 'Cabinet notarial à Bamako, Mali. Maître Amadou Koné vous accompagne pour vos actes immobiliers, successions, donations, affaires et conseils juridiques.',
