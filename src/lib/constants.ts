@@ -2,7 +2,7 @@ export const CABINET = {
   name: 'Maître Amadou Koné',
   title: 'Notaire à Bamako, Mali',
   shortName: 'Cabinet Koné',
-  phone: '+223 20 22 44 66',
+  phone: '+223 63 07 76 59',
   whatsapp: '22376000000',
   email: 'contact@maitre-amadou-kone.com',
   address: {

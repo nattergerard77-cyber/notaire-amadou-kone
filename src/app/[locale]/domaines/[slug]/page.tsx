@@ -757,7 +757,7 @@ export default function DomainDetailPage({ params }: Params) {
                   <ChevronRight size={17} />
                 </Link>
 
-                <a href="https://wa.me/22320224466" className="area-sidebar-item">
+                <a href="https://wa.me/22363077659" className="area-sidebar-item">
                   <MessageCircle size={22} />
                   <span>
                     <strong>WhatsApp</strong>
@@ -766,11 +766,11 @@ export default function DomainDetailPage({ params }: Params) {
                   <ChevronRight size={17} />
                 </a>
 
-                <a href="tel:+22320224466" className="area-sidebar-item">
+                <a href="tel:+22363077659" className="area-sidebar-item">
                   <Phone size={22} />
                   <span>
                     <strong>Téléphone</strong>
-                    <small>+223 20 22 44 66<br />Lun–Jeu : 08h–17h</small>
+                    <small>+223 63 07 76 59<br />Lun–Jeu : 08h–17h</small>
                   </span>
                 </a>
 
@@ -796,7 +796,7 @@ export default function DomainDetailPage({ params }: Params) {
                 <CalendarDays size={18} />
                 Réserver un créneau
               </Link>
-              <a href="https://wa.me/22320224466" className="area-outline-btn">
+              <a href="https://wa.me/22363077659" className="area-outline-btn">
                 <MessageCircle size={18} />
                 WhatsApp direct
               </a>
