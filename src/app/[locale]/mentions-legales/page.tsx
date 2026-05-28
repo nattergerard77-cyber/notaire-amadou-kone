@@ -81,7 +81,7 @@ const legalSections = [
             <strong>Adresse :</strong> Hamdallaye ACI 2000, Rue 327, Bamako, Mali
           </li>
           <li>
-            <strong>Téléphone :</strong> +223 63 07 76 59
+            <strong>Téléphone :</strong> +223 75 87 41 99
           </li>
           <li>
             <strong>Email :</strong> contact@maitre-amadou-kone.com
@@ -110,8 +110,8 @@ const legalSections = [
     icon: <IconShield />,
     content: (
       <p>
-        L’ensemble des contenus présents sur ce site relève de la législation
-        malienne et internationale sur le droit d’auteur et la propriété
+        L&apos;ensemble des contenus présents sur ce site relève de la législation
+        malienne et internationale sur le droit d&apos;auteur et la propriété
         intellectuelle. Toute reproduction totale ou partielle est strictement
         interdite sans autorisation expresse et préalable.
       </p>
@@ -122,7 +122,7 @@ const legalSections = [
     icon: <IconScale />,
     content: (
       <p>
-        Le cabinet s’efforce de fournir des informations exactes et mises à jour.
+        Le cabinet s&apos;efforce de fournir des informations exactes et mises à jour.
         Toutefois, ces informations sont données à titre indicatif et ne sauraient
         remplacer un conseil personnalisé adapté à chaque situation.
       </p>
@@ -158,7 +158,7 @@ export default function MentionsLegalesPage() {
 
       <main className="legal-page">
         <div className="legal-container">
-          <nav className="legal-breadcrumb" aria-label="Fil d’Ariane">
+          <nav className="legal-breadcrumb" aria-label="Fil d'Ariane">
             <Link href="/">Accueil</Link>
             <span>/</span>
             <strong>Mentions légales</strong>
@@ -191,9 +191,9 @@ export default function MentionsLegalesPage() {
                   <IconMap />
                   <span>Hamdallaye ACI 2000, Rue 327, Bamako, Mali</span>
                 </div>
-                <a href="tel:+22363077659">
+                <a href="tel:+22375874199">
                   <IconPhone />
-                  <span>+223 63 07 76 59</span>
+                  <span>+223 75 87 41 99</span>
                 </a>
                 <a href="mailto:contact@maitre-amadou-kone.com">
                   <IconMail />
@@ -226,8 +226,8 @@ export default function MentionsLegalesPage() {
             <div>
               <h2>Des questions sur nos mentions légales ?</h2>
               <p>
-                Notre équipe reste disponible pour toute demande d’information
-                complémentaire concernant l’utilisation de notre site.
+                Notre équipe reste disponible pour toute demande d&apos;information
+                complémentaire concernant l&apos;utilisation de notre site.
               </p>
             </div>
             <div className="legal-cta__actions">

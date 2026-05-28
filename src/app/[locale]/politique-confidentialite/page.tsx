@@ -92,7 +92,7 @@ const privacySections = [
     number: "06",
     title: "Vos droits",
     icon: <IconShield />,
-    text: "Vous disposez d’un droit d’accès, de rectification, de suppression et de limitation concernant vos informations personnelles. Vous pouvez exercer ces droits en contactant directement le cabinet.",
+    text: "Vous disposez d'un droit d'accès, de rectification, de suppression et de limitation concernant vos informations personnelles. Vous pouvez exercer ces droits en contactant directement le cabinet.",
   },
   {
     number: "07",
@@ -120,7 +120,7 @@ export default function PolitiqueConfidentialitePage() {
 
       <main className="legal-page">
         <div className="legal-container">
-          <nav className="legal-breadcrumb" aria-label="Fil d’Ariane">
+          <nav className="legal-breadcrumb" aria-label="Fil d'Ariane">
             <Link href="/">Accueil</Link>
             <span>/</span>
             <strong>Politique de confidentialité</strong>
@@ -144,16 +144,16 @@ export default function PolitiqueConfidentialitePage() {
               <div className="legal-sidebar__icon">
                 <IconPhone />
               </div>
-              <h2>Besoin d’aide ?</h2>
+              <h2>Besoin d&apos;aide ?</h2>
               <p>
                 Notre équipe est à votre écoute pour toute question concernant la
                 protection de vos données personnelles.
               </p>
 
               <div className="legal-sidebar__list">
-                <a href="tel:+22363077659">
+                <a href="tel:+22375874199">
                   <IconPhone />
-                  <span>+223 63 07 76 59</span>
+                  <span>+223 75 87 41 99</span>
                 </a>
                 <a href="mailto:contact@maitre-amadou-kone.com">
                   <IconMail />
@@ -199,7 +199,7 @@ export default function PolitiqueConfidentialitePage() {
               <Link href="/contact" className="legal-btn legal-btn--gold">
                 Nous contacter
               </Link>
-              <a href="tel:+22363077659" className="legal-btn legal-btn--dark">
+              <a href="tel:+22375874199" className="legal-btn legal-btn--dark">
                 Nous appeler
               </a>
             </div>

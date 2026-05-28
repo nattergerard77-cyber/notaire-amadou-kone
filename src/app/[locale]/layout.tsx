@@ -52,7 +52,7 @@ export default async function LocaleLayout({
                     "addressLocality": "Bamako",
                     "addressCountry": "ML"
                   },
-                  "telephone": "+223 63 07 76 59",
+                  "telephone": "+223 75 87 41 99",
                   "logo": "https://www.maitre-amadou-kone.com/images/favicon.png"
                 },
                 {
