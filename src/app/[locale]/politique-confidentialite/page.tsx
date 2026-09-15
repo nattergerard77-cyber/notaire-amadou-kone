@@ -151,9 +151,9 @@ export default function PolitiqueConfidentialitePage() {
               </p>
 
               <div className="legal-sidebar__list">
-                <a href="tel:+22375874199">
+                <a href="tel:+22389585761">
                   <IconPhone />
-                  <span>+223 75 87 41 99</span>
+                  <span>+22389585761</span>
                 </a>
                 <a href="mailto:contact@maitre-amadou-kone.com">
                   <IconMail />
@@ -199,7 +199,7 @@ export default function PolitiqueConfidentialitePage() {
               <Link href="/contact" className="legal-btn legal-btn--gold">
                 Nous contacter
               </Link>
-              <a href="tel:+22375874199" className="legal-btn legal-btn--dark">
+              <a href="tel:+22389585761" className="legal-btn legal-btn--dark">
                 Nous appeler
               </a>
             </div>

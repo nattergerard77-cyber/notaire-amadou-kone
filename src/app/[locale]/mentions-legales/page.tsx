@@ -81,7 +81,7 @@ const legalSections = [
             <strong>Adresse :</strong> Hamdallaye ACI 2000, Rue 327, Bamako, Mali
           </li>
           <li>
-            <strong>Téléphone :</strong> +223 75 87 41 99
+            <strong>Téléphone :</strong> +22389585761
           </li>
           <li>
             <strong>Email :</strong> contact@maitre-amadou-kone.com
@@ -191,9 +191,9 @@ export default function MentionsLegalesPage() {
                   <IconMap />
                   <span>Hamdallaye ACI 2000, Rue 327, Bamako, Mali</span>
                 </div>
-                <a href="tel:+22375874199">
+                <a href="tel:+22389585761">
                   <IconPhone />
-                  <span>+223 75 87 41 99</span>
+                  <span>+22389585761</span>
                 </a>
                 <a href="mailto:contact@maitre-amadou-kone.com">
                   <IconMail />

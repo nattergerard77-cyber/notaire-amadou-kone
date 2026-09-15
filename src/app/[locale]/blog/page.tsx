@@ -50,7 +50,7 @@ export default function BlogPage() {
                 <Link href="/infos-pratiques/rendez-vous" className="btn-primary" style={{ padding: '0.95rem 1.5rem', fontSize: '0.95rem' }}>
                   Prendre rendez-vous <IconCalendar width="18" height="18" />
                 </Link>
-                <a href="tel:+22320294101" className="btn-outline" style={{ padding: '0.95rem 1.5rem', fontSize: '0.95rem' }}>
+                <a href="tel:+22389585761" className="btn-outline" style={{ padding: '0.95rem 1.5rem', fontSize: '0.95rem' }}>
                   Nous appeler <IconPhone width="18" height="18" />
                 </a>
               </div>
